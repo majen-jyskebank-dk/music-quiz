@@ -19,6 +19,7 @@ async function createSocket(httpServer) {
         });
 
         socket.on('disconnect', () => {
+            console.log(`Socket ${socket.id} disconnected.`);
             let player = playerService.removePlayer(socket.id);
             if (player) {
                 socket.broadcast.emit('playerLeft', player);

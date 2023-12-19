@@ -1,5 +1,14 @@
 <script>
-	import "../app.css";
+	import OnlinePlayers from "$lib/players/OnlinePlayers.svelte";
+import "../app.css";
 </script>
 
-<slot />
+<div class="flex flex-col">
+	<aside>
+		<OnlinePlayers />
+	</aside>
+
+	<main>
+		<slot />
+	</main>
+</div>

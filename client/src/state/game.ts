@@ -3,7 +3,7 @@ import type { Game } from "../models/game";
 import type { Player } from "../models/player";
 
 function createGame() {
-    const { subscribe, set, update } = writable<Game>({players: []});
+    const { subscribe, set, update } = writable<Game>();
 
     return {
         subscribe,
